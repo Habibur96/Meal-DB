@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealDb</title>
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <h2 class="text-center mt-5 mb-4 text-primary">Search Your Favourite Food</h2>
+
+    <!-- Search Food -->
+    <div class="input-group mb-5 mx-auto w-25">
+        <input id="search" type="text" class="form-control" placeholder="Search Your Food"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button onclick='searchFood()' class="btn btn-outline-secondary" type="button"
+            id="button-addon2">Search</button>
+    </div>
+
+    <!-- Single Meal Details -->
+    <div id="meal-details" class="container mb-5 w-25 mx-auto">
+
+    </div>
+
+
+    <!-- Food Details -->
+
+    <div class="container">
+        <div id="card" class="row row-cols-1 row-cols-md-3 g-4 w-100 mx-auto">
+
+        </div>
+    </div>
+
+
+    <!-- Bootstrap Js Link -->
+    <script src="bootstrap.bundle.min.js"></script>
+    <!-- Js Link -->
+    <script src="mealdb.js"></script>
+
+</body>
+
+</html>
