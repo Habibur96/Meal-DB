@@ -1,4 +1,5 @@
 
+document.getElementById('error-message').style.display = 'none';
 const searchFood = () => {
 
     const searchField = document.getElementById('search');
@@ -7,6 +8,7 @@ const searchFood = () => {
 
     // Clear Data
     searchText.value = '';
+    document.getElementById('error-message').style.display = 'block';
     if (searchText == '') {
 
         alert('Please write something to display.');
@@ -18,10 +20,15 @@ const searchFood = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => displaySearchResult(data.meals))
-        // .then(data => console.log(data.meals))
+            // .then(data => console.log(data.meals))
+            // .catch(error => console.log(error))
+            .catch(error => displayErrorMessage(error))
     }
 
+}
 
+const displayErrorMessage = errorMessage => {
+    document.getElementById('error-message').style.display = 'block';
 }
 
 const displaySearchResult = meals => {
